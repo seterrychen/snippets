@@ -6,6 +6,8 @@ pip install google-cloud-vision
 
 Don't forget to set credential file path into `GOOGLE_APPLICATION_CREDENTIALS` environ var
 
+## [API Document](https://googleapis.github.io/google-cloud-python/latest/vision/index.html)
+
 ## Moderation, Safe search detection
 ```
 from google.cloud import vision
@@ -33,3 +35,5 @@ print(safe.adult, safe.medical, safe.spoof, safe.violence, safe.racy, sep=',')
 
 # example result of print: 2, 1, 1, 1, 5
 ``` 
+
+## [More snippets](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/vision/cloud-client/detect/detect.py)
