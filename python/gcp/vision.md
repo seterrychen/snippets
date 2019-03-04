@@ -4,6 +4,8 @@
 pip install google-cloud-vision
 ```
 
+Don't forget to set credential file path into `GOOGLE_APPLICATION_CREDENTIALS` environ var
+
 ## Moderation, Safe search detection
 ```
 from google.cloud import vision
