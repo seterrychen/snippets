@@ -29,3 +29,13 @@ template.file example(parameter is users)
 </ul>
 ```
 
+## [whitespace control](http://jinja.pocoo.org/docs/dev/templates/#whitespace-control)
+
+```
+{% for item in seq -%}
+    {{ item }}
+{%- endfor %}
+```
+
+
+
