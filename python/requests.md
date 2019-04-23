@@ -18,3 +18,9 @@ img_content = requests.get(uri).content  # bytes
 ```
 requests.get(uri, headers={'Authorization': 'TOK:<MY_TOKEN>'})
 ```
+
+## GET method with params
+
+```
+request.get(uri, params={'param': 'value'})
+```
