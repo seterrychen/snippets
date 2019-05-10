@@ -8,6 +8,22 @@ pip install slackclient
 ## [Slack API(official)](https://api.slack.com/methods)
 
 ## Call API by slackclient
+### 2.x version
+
+```
+import os
+import slack
+
+slack_token = os.environ["SLACK_API_TOKEN"]
+sc = slack.WebClient(token=slack_token)
+
+sc.chat_postMessage(
+  channel="#random',
+  text="Hello from Python! :tada:"
+)
+```
+
+### 1.x version
 
 ```
 import os
@@ -24,6 +40,17 @@ sc.api_call(
 ```
 
 ## Adding attachment
+### 2.x version
+
+```
+sc.chat_postMessage(
+  channel="#random',
+  text="What would you like to do?"
+  attachments=json.dumps(attachment)
+)
+```
+
+### 1.x version
 
 ```
 attachment = [
