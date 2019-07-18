@@ -22,3 +22,8 @@ rsync -avh /src /dst
 rsync -a --no-perms --no-owner --no-group /src /dst
 --no-OPTION: turn off one or more implied options 
 ```
+
+### delete folders/files when those deleted at src
+```
+rsync -a --delete /src /dst
+```
