@@ -14,3 +14,10 @@ location / {
     etag off;
 }
 ```
+
+## multiple location
+```
+location ~ ^/(first/location|second/location)/ {
+  ...
+}
+```
