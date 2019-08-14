@@ -1,3 +1,6 @@
+## Install
+Alpine: `findutils`
+
 ## Usage
 
 ### find specific type and execute command
