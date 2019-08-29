@@ -15,6 +15,6 @@ $ aws s3api head-object --bucket www.codeengine.com --key index.html
 }
 
 $ aws s3api head-object --bucket www.codeengine.com --key not_existing.txt
-$ # return nothing and exist code is 0
+An error occurred (404) when calling the HeadObject operation: Not Found
 ```
 
