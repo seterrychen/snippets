@@ -1,11 +1,7 @@
-# Dynamodb
+## Usage
+### [boto3 dynamodb document](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
 
-```
-pip install boto3
-```
-
-
-## Put a item
+### Put a item
 
 ```
 import boto3
@@ -19,7 +15,7 @@ client.put_item(
 )
 ```
 
-# List all a item (using scan for small table)
+### List all a item (using scan for small table)
 
 ```
 import boto3
