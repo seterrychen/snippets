@@ -30,7 +30,7 @@ modifier:  = | ~ | ~* | ^~
 
 `~*`: modifier (for case-insensitive matching)
 `~`: modifier (for case-sensitive matching)
-`^~`: If the longest matching prefix location has the `^~ modifier then regular expressions are not checked.
+`^~`: If the longest matching prefix location has the `^~` modifier then regular expressions are not checked.
 
 ```
 location  = / {
