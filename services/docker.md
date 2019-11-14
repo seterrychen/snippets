@@ -24,3 +24,23 @@ $ sudo usermod -aG docker your-user
 ```
 echo "" > $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)
 ```
+
+### How to Build and Run ARM Docker Images on x86 Hosts
+Prepare
+```
+$ apt-get update && apt-get install -y --no-install-recommends qemu-user-static binfmt-support
+$ update-binfmts --enable qemu-arm
+$ docker run --rm --privileged multiarch/qemu-user-static:register
+```
+
+Build (inside Dockerfile)
+```
+COPY qemu-arm-static /usr/bin/qemu-arm-static
+```
+
+Run (if there is no qemu-arm-static inside image)
+```
+$ docker run -it --name your-container-name -v /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static your-arm-image
+```
+
+```
