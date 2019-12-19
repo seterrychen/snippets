@@ -29,6 +29,12 @@ $ git log --name-status
 ```
 
 
+### Delete remote branch
+```
+git push origin :branch_name
+```
+
+
 ### Remove a Big object (housekeeping)
 1. find big objects
 
