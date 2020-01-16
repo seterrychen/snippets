@@ -26,3 +26,14 @@ find . -newermt "2013-01-01 00:00:00"`
           m   The modification time of the file reference
           t   reference is interpreted directly as a time
 ```
+
+### find with exclude folder(s)
+
+```
+find . -path ./misc -prune -o -name '*.txt' -print
+```
+
+multiple folders
+```
+find . \( -path dir1 -o -path dir2 -o -path dir3 \) -prune -o -print
+```
