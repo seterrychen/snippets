@@ -1,3 +1,5 @@
+## Dashboard [README.md](https://github.com/kubernetes/dashboard/blob/master/README.md)
+
 ## Deploy
 
 ```
