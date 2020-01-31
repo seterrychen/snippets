@@ -42,3 +42,8 @@ data:
       groups:
         - system:masters
 ```
+
+
+## References
+
+* [EKS Platform Versions](https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html)
