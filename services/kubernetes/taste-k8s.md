@@ -3,7 +3,9 @@
 1. [Kubernetes Concept](concepts.md)
 2. Create Kubernetes cluster
    * [Setup local Kubernetes Cluster using Minikube](minikube.md) or
-   * [Run Kubernetes on Amazon EKS service](eks.md)
+   * [Run Kubernetes on Amazon EKS service](eks.md) or
+   * [Creating a cluster with kubeadm](kubeadm.md)
+
 
 ## Tools
 
