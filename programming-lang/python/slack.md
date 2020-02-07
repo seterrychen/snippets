@@ -1,14 +1,16 @@
 # Slack
 
+## python-slackclient
+
 ```
 pip install slackclient
 ```
 
 
-## [Slack API(official)](https://api.slack.com/methods)
+### [Slack API(official)](https://api.slack.com/methods)
 
-## Call API by slackclient
-### 2.x version
+### Call API by slackclient
+#### 2.x version
 
 ```
 import os
@@ -23,7 +25,7 @@ sc.chat_postMessage(
 )
 ```
 
-### 1.x version
+#### 1.x version
 
 ```
 import os
@@ -39,8 +41,8 @@ sc.api_call(
 )
 ```
 
-## Adding attachment
-### 2.x version
+### Adding attachment
+#### 2.x version
 
 ```
 sc.chat_postMessage(
@@ -50,7 +52,7 @@ sc.chat_postMessage(
 )
 ```
 
-### 1.x version
+#### 1.x version
 
 ```
 attachment = [
@@ -78,4 +80,22 @@ attachment = [
 ]
 
 sc.api_call("chat.postMessage", channel=channel, text="What would you like to do?", attachments=json.dumps(attachment))
+```
+
+
+## Using Requests to send message to incoming message
+```
+def send_slack_msg(msg):
+    hook_url = "https://xxxxxx"
+    text = {'text': msg}
+    requests.post(
+        hook_url,
+        data=json.dumps(text),
+        headers={'Content-Type': 'application/json'}
+    )
+```
+
+### metion user or channel
+```
+msg = '<@userid@> xxxxxxx'
 ```
