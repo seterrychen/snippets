@@ -43,4 +43,12 @@ Run (if there is no qemu-arm-static inside image)
 $ docker run -it --name your-container-name -v /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static your-arm-image
 ```
 
+### Change storage path
+ex: Debian/Ubuntu
+```
+FROM:
+ExecStart=/usr/bin/docker daemon -H fd://
+TO:
+ExecStart=/usr/bin/docker daemon -g /new/path/docker -H fd://
+```
 ```

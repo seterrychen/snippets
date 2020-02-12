@@ -42,3 +42,10 @@ ${var##*SubStr} # will drop begin of string up to last occur of `SubStr`
 ${var%SubStr*}  # will drop part of string from last occur of `SubStr` to the end
 ${var%%SubStr*} # will drop part of string from first occur of `SubStr` to the end
 ```
+
+### decode URL-encoded string
+```
+name$ urldecode() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+name$ urldecode https%3A%2F%2Fgoogle.com%2Fsearch%3Fq%3Durldecode%2Bbash
+https://google.com/search?q=urldecode+bash
+```
