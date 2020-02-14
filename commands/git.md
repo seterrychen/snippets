@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Tutorial](#tutorial)
+- [Usage](#usage)
+  - [could not read Username for 'https://github.com': terminal prompts disabled](#could-not-read-username-for-httpsgithubcom-terminal-prompts-disabled)
+  - [How to show changed file name only with git log?](#how-to-show-changed-file-name-only-with-git-log)
+  - [How to show changed file status with git log?](#how-to-show-changed-file-status-with-git-log)
+  - [Delete remote branch](#delete-remote-branch)
+  - [Remove a Big object (housekeeping)](#remove-a-big-object-housekeeping)
+  - [How to revert a Git repository to a specific commit](#how-to-revert-a-git-repository-to-a-specific-commit)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Tutorial
 
 * [Git 教學- Git 書- 為你自己學Git | 高見龍](https://gitbook.tw/)
