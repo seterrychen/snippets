@@ -10,6 +10,7 @@
   - [Delete remote branch](#delete-remote-branch)
   - [Remove a Big object (housekeeping)](#remove-a-big-object-housekeeping)
   - [How to revert a Git repository to a specific commit](#how-to-revert-a-git-repository-to-a-specific-commit)
+  - [Set ssh options](#set-ssh-options)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -89,4 +90,9 @@ $ git gc
 ```
 $ git reflog # get commit_id which you want to revert
 $ git reset --hard commit_id
+```
+
+### Set ssh options
+```
+git config --global core.sshCommand 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 ```
