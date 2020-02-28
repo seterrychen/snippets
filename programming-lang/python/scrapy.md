@@ -6,3 +6,4 @@ $ pip install scrapy
 ```
 
 ## [Documents](https://docs.scrapy.org/en/latest/index.html)
+## [Tips](https://blog.scrapinghub.com/2016/08/25/how-to-crawl-the-web-politely-with-scrapy)
