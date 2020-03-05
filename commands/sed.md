@@ -17,3 +17,8 @@ $ sed -n '16224,16482 p' orig-data-file
 $ # -n, --quiet, --silent  suppress automatic printing of pattern space
 $ # p   Print out the pattern space (to the standard output)
 ```
+
+### delete line using line number
+```
+$ sed -i '2,8d' file
+```
