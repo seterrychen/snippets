@@ -5,7 +5,8 @@
 * `eksctl` : [Document](https://eksctl.io/)
 
 
-## Using eksctl to create EKS cluster
+## Usage
+### Using eksctl to create EKS cluster
 
 ```bash
 $ eksctl create cluster \                                             
@@ -18,8 +19,12 @@ $ eksctl create cluster \
 --nodes-max 4
 ```
 
+### update kubeconfig
+```
+aws eks --region region-code update-kubeconfig --name cluster_name
+```
 
-## for other IAM user to control kubernetes
+### for other IAM user to control kubernetes
 
 Reference: [Managing Users or IAM Roles for your Cluster](https://docs.aws.amazon.com/en_us/eks/latest/userguide/add-user-role.html)
 
@@ -42,6 +47,15 @@ data:
       groups:
         - system:masters
 ```
+
+### To get Client when using load balance 
+add annotations into K8s Service object
+```
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
+```
+
+Then classic load balancer will using Proxy Protocol to carry connection information from the source requesting the connection to the destination for which the connection was requested.
 
 
 ## References
