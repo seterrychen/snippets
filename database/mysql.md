@@ -21,3 +21,12 @@ SHOW FULL TABLES IN database_name WHERE TABLE_TYPE LIKE 'VIEW';
 ```
 SHOW CREATE VIEW viewname
 ```
+
+### User CRUD
+```
+# ‘user’@’%’, % means that any hostname
+mysql> CREATE USER 'user'@'hostname';
+mysql> GRANT ALL PRIVILEGES ON dbTest.* To 'user'@'hostname' IDENTIFIED BY 'password';
+mysql> revoke grant option on dbTest.* from 'user'@'hostname';
+mysql> show grants for 'user'@'hostname';
+```
