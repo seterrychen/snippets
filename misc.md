@@ -6,6 +6,7 @@
 * [MDN Web Docs - Mozilla](https://developer.mozilla.org/zh-TW/)
 * [Wayback Machine - Internet Archive](https://web.archive.org/)
 * [Crop a Circle in image online](https://crop-circle.imageonline.co/)
+* [Color Hunt - Color Palettes for Designers and Artists](https://colorhunt.co/)
 
 ## Markdown
 * [To generate table of content](https://github.com/thlorenz/doctoc)

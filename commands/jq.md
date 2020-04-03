@@ -28,3 +28,7 @@ $ echo "$json" | jq -c '.[] | select(.genre | contains("house"))'
 {"genre":"deep house"}
 {"genre":"progressive house"}
 ```
+* Multiple conditions
+```
+.[] | select((.processedBarsVolume <= 5) and .processedBars > 0)
+```
