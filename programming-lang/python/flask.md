@@ -6,6 +6,7 @@ pip install flask
 ## Usage
 ### Tutorial
 * [Flask for Beginners Tutorial - Learn Flask in 40 Minutes (2019)](https://www.youtube.com/watch?v=EnJKHVEzHFw)
+* [Using Flask & MongoDB to add pagination](https://harishvc.com/2015/04/15/pagination-flask-mongodb/)
 
 ### [Project Layout](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/)
 ```
