@@ -22,3 +22,8 @@ $ # p   Print out the pattern space (to the standard output)
 ```
 $ sed -i '2,8d' file
 ```
+
+### Add character to the beginning of each line using sed 
+```
+$ sed 's/^/#/' file.txt
+```
