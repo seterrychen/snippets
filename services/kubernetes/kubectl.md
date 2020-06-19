@@ -37,3 +37,8 @@ $ kubectl describe po     # to show detail pods information
 $ kubectl get deploy      # to list deployments, deploy => deployments
 $ kubectl describe deploy # to show detail deployments
 ```
+
+* Run pod with nodeSelector
+```bash=
+$ kubectl run nginx --image=nginx --restart=Never --overrides='{ "apiVersion": "v1", "spec": { "nodeSelector": { "arch": "arm" } } }' --rm -it
+```
