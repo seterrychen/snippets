@@ -8,6 +8,7 @@
 * [Wayback Machine - Internet Archive](https://web.archive.org/)
 * [Crop a Circle in image online](https://crop-circle.imageonline.co/)
 * [Color Hunt - Color Palettes for Designers and Artists](https://colorhunt.co/)
+* [12 Best Tools for Playing Around with Color](https://medium.muz.li/12-best-tools-for-playing-around-with-color-1cdbed08e362)
 * [免費線上Logo設計，商標製作工具– DesignEvo](https://www.designevo.com/tw/)
 
 ## Markdown
