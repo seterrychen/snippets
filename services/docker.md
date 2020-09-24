@@ -1,4 +1,11 @@
 # Installation
+Quick installation
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
+
+Offical installation
 ```
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -18,6 +25,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ sudo usermod -aG docker your-user
 ```
 [more](https://docs.docker.com/install/)
+
 
 ## Usage
 ### To clean docker logs
