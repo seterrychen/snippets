@@ -15,3 +15,16 @@
 
 ## SSH
 * [SSH Host Key - What, Why, How | SSH.COM](https://www.ssh.com/ssh/host-key)
+
+
+## Security Patch
+```
+$ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi # list packages which will be upgrded
+$ sudo apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'} | xargs sudo apt-get install
+```
+
+using `unattended-upgrade` will be better
+```
+$ sudo unattended-upgrade --dry-run -d
+$ sudo unattended-upgrade -d
+```
