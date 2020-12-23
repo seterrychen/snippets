@@ -18,3 +18,7 @@ $ aws s3api head-object --bucket www.codeengine.com --key not_existing.txt
 An error occurred (404) when calling the HeadObject operation: Not Found
 ```
 
+### Get size of S3 Bucket
+```
+aws s3 ls --summarize --human-readable --recursive s3://bucket-name/directory
+```
