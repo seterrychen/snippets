@@ -63,3 +63,10 @@ _  = underscore
 &  = ampersand
 ^  = caret
 ```
+
+
+## Generate PEM key
+```
+ssh-keygen -t rsa -b 4096 -m PEM
+openssl rsa -in id_rsa -outform pem > id_rsa.pem
+```
