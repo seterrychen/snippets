@@ -15,3 +15,10 @@ with open(filename, 'r') as f:
     for line_no, line in enumerate(f):
         print(line_no, line)
 ```
+
+
+## Change file permission
+
+```
+os.chmod("file", 0o755)
+```
