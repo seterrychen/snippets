@@ -6,6 +6,11 @@
 
 ## Key Concepts
 * [Critical Rendering Path(CRP)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)
+* Bytes → characters → tokens → nodes → object model.
+* [Document Object Model (DOM)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model#document_object_model_dom)
+* [CSS Object Model (CSSOM)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model#css_object_model_cssom)
+* [Render-tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)
+* [Render Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
 
 ## Tools
 * [PageSpeed Insights - Google Developers](https://developers.google.com/speed/pagespeed/insights/)
