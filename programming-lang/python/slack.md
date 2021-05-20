@@ -1,15 +1,17 @@
 # Slack
 
-## python-slackclient
-
+## Installation
 ```
 $ pip install slack_sdk
 ```
 
+## Usage Note
+* Before Slack Bot sending message to private channel, the bot should be invited by command `/invite @BotName` with `chat:write` permission
 
-### [Slack API(official)](https://api.slack.com/methods)
-### Call API by slackclient
-#### Sending a message to Slack
+
+## [Slack API(official) Document](https://api.slack.com/methods)
+## Examples
+### Sending a message to Slack
 ```
 import os
 from slack_sdk import WebClient
