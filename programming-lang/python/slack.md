@@ -3,99 +3,26 @@
 ## python-slackclient
 
 ```
-pip install slackclient
+$ pip install slack_sdk
 ```
 
 
 ### [Slack API(official)](https://api.slack.com/methods)
-
 ### Call API by slackclient
-#### 2.x version
-
+#### Sending a message to Slack
 ```
 import os
-import slack
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
-slack_token = os.environ["SLACK_API_TOKEN"]
-sc = slack.WebClient(token=slack_token)
+client = WebClient(token=os.environ['SLACK_BOT_TOKEN'])
 
-sc.chat_postMessage(
-  channel="#random',
-  text="Hello from Python! :tada:"
-)
-```
-
-#### 1.x version
-
-```
-import os
-from slackclient import SlackClient
-
-slack_token = os.environ["SLACK_API_TOKEN"]
-sc = SlackClient(slack_token)
-
-sc.api_call(
-  "chat.postMessage",
-  channel="C0XXXXXX",
-  text="Hello from Python! :tada:"
-)
-```
-
-### Adding attachment
-#### 2.x version
-
-```
-sc.chat_postMessage(
-  channel="#random',
-  text="What would you like to do?"
-  attachments=json.dumps(attachment)
-)
-```
-
-#### 1.x version
-
-```
-attachment = [
-    {
-        "text": "Choose an action",
-        "fallback": "You are unable to choose an option",
-        "callback_id": "lunch_intro",
-        "color": "#3AA3E3",
-        "attachment_type": "default",
-        "actions": [
-            {
-                "name": "enroll",
-                "text": "Enroll",
-                "type":"button",
-                "value":"enroll"
-            },
-            {
-                "name": "leave",
-                "text": "Leave",
-                "type": "button",
-                "value": "leave"
-            }
-        ]
-    }
-]
-
-sc.api_call("chat.postMessage", channel=channel, text="What would you like to do?", attachments=json.dumps(attachment))
-```
-
-
-## Using Requests to send message to incoming message
-```
-def send_slack_msg(msg):
-    hook_url = "https://xxxxxx"
-    text = {'text': msg}
-    requests.post(
-        hook_url,
-        data=json.dumps(text),
-        headers={'Content-Type': 'application/json'}
-    )
-```
-
-### metion user or channel
-```
-msg = '<@userid@> xxxxxxx'
+try:
+    response = client.chat_postMessage(channel='#random', text="Hello world!")
+    assert response["message"]["text"] == "Hello world!"
+except SlackApiError as e:
+    # You will get a SlackApiError if "ok" is False
+    assert e.response["ok"] is False
+    assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
+    print(f"Got an error: {e.response['error']}")
 ```
